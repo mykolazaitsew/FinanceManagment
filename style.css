@@ -1,0 +1,174 @@
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e4e7ec;
+}
+
+/* Dark Mode Toggle */
+.toggle-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.toggle-slot {
+    position: relative;
+    height: 5em;
+    width: 10em;
+    border: 3px solid #e4e7ec;
+    border-radius: 5em;
+    background-color: white;
+    box-shadow: 0px 5px 15px #e4e7ec;
+    transition: background-color 250ms;
+}
+
+.toggle-checkbox:checked ~ .toggle-slot {
+    background-color: #374151;
+}
+
+.toggle-button {
+    transform: translate(5.75em, 0.75em);
+    position: absolute;
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    background-color: #ffeccf;
+    box-shadow: inset 0px 0px 0px 0.4em #ffbb52;
+    transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+}
+
+.toggle-checkbox:checked ~ .toggle-slot .toggle-button {
+    background-color: #485367;
+    box-shadow: inset 0px 0px 0px 0.4em white;
+    transform: translate(0.75em, 0.75em);
+}
+
+.sun-icon {
+    position: absolute;
+    height: 3em;
+    width: 3em;
+    color: #ffbb52;
+}
+
+.sun-icon-wrapper {
+    position: absolute;
+    height: 3em;
+    width: 3em;
+    opacity: 1;
+    transform: translate(1em, 1em) rotate(15deg);
+    transform-origin: 50% 50%;
+    transition: opacity 150ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+}
+
+.toggle-checkbox:checked ~ .toggle-slot .sun-icon-wrapper {
+    opacity: 0;
+    transform: translate(1.5em, 1em) rotate(0deg);
+}
+
+.moon-icon {
+    position: absolute;
+    height: 3em;
+    width: 3em;
+    color: white;
+}
+
+.moon-icon-wrapper {
+    position: absolute;
+    height: 3em;
+    width: 3em;
+    opacity: 0;
+    transform: translate(5em, 1em) rotate(0deg);
+    transform-origin: 50% 50%;
+    transition: opacity 150ms, transform 500ms cubic-bezier(.26,2.5,.46,.71);
+}
+
+.toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper {
+    opacity: 1;
+    transform: translate(6em, 1em) rotate(-15deg);
+}
+
+.darkModeBtn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Main Section */
+.main {
+    display: flex;
+    position: fixed;
+}
+
+/* Values Section */
+.values {
+    display: flex;
+    padding-top: 300px;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.values h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Button Styling */
+button.addBtn {
+    background-color: #ffbb52;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.addBtn:hover {
+    background-color: #e59b3c;
+    transform: translateY(-2px);
+}
+
+button.addBtn:active {
+    background-color: #c8872a;
+    transform: translateY(2px);
+}
+
+/* Transfer and Deposit Buttons */
+button.ChooseTransfer, button.Chest {
+    background-color: #485367;
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 10px;
+}
+
+button.ChooseTransfer:hover, button.Chest:hover {
+    background-color: #3d4a59;
+    transform: translateY(-2px);
+}
+
+button.ChooseTransfer:active, button.Chest:active {
+    background-color: #2a3848;
+    transform: translateY(2px);
+}

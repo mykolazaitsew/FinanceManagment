@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./img/coin-icon.png">
+    <script src="https://code.iconify.design/1/1.0.4/iconify.min.js" defer></script>
+    <script src="index.js" defer></script>
+    <title>Bank Management</title>
+</head>
+<body>
+    <div class="main">
+        <h1>Finances</h1>
+    </div>
+    
+    <div class="values">
+        <h2 class="UAH">UAH ₴</h2>
+        <h2 class="balance" id="balance">Balance 0 ₴</h2>
+        <!-- <h2 class="USD">USD $</h2>
+        <h2 class="EURO">EURO €</h2> -->
+     </div>
+
+     <div class="valuesBtn">
+        <button onclick="addMoney()" class="addBtn" id="balanceBtn">Add Hryvnias</button>
+        <!-- <button onclick="addMoney" class="addBtn">Add Euros</button>
+        <button onclick="addMoney" class="addBtn">Add Dollars</button> -->
+     </div>
+
+    <!-- <div class="TransferValue">
+        <button>Choose where to transfer</button>
+    </div> -->
+
+    <div class="case">
+        <button onclick="hideMoney()" class="Chest" id="chest">Hide money</button>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <label class="darkModeBtn">
+        <input class="toggle-checkbox" type="checkbox" id="darkModeToggle">
+        <div class="toggle-slot">
+            <div class="sun-icon-wrapper">
+                <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></div>
+            </div>
+            <div class="toggle-button"></div>
+            <div class="moon-icon-wrapper">
+                <div class="iconify moon-icon" data-icon="feather-moon" data-inline="false"></div>
+            </div>
+        </div>
+    </label>
+</body>
+</html>
